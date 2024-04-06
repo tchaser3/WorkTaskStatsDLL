@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B178F99-C200-4F6C-8228-D69380D91CB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkTaskStatsDLL</RootNamespace>
+    <AssemblyName>WorkTaskStatsDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EmployeeProjectAssignmentDLL">
+      <HintPath>..\..\Blue Jay Class Library\EmployeeProjectAssignmentDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WorkTaskDLL">
+      <HintPath>..\..\Blue Jay Class Library\WorkTaskDLL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindSortedWorkTaskStatsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedWorkTaskStatsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkTaskStatsByTaskIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkTaskStatsByTaskIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWorkTaskStatsEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWorkTaskStatsEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWorkTaskStatsEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWorkTaskStatsEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WorkTaskStatsClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkTaskStatsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkTaskStatsDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindSortedWorkTaskStatsDataSet.xsc">
+      <DependentUpon>FindSortedWorkTaskStatsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedWorkTaskStatsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedWorkTaskStatsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedWorkTaskStatsDataSet.xss">
+      <DependentUpon>FindSortedWorkTaskStatsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskStatsByTaskIDDataSet.xsc">
+      <DependentUpon>FindWorkTaskStatsByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkTaskStatsByTaskIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkTaskStatsByTaskIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkTaskStatsByTaskIDDataSet.xss">
+      <DependentUpon>FindWorkTaskStatsByTaskIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskStatsEntry.xsc">
+      <DependentUpon>InsertWorkTaskStatsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkTaskStatsEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWorkTaskStatsEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWorkTaskStatsEntry.xss">
+      <DependentUpon>InsertWorkTaskStatsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateWorkTaskStatsEntry.xsc">
+      <DependentUpon>UpdateWorkTaskStatsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkTaskStatsEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWorkTaskStatsEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWorkTaskStatsEntry.xss">
+      <DependentUpon>UpdateWorkTaskStatsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskStatsDataSet.xsc">
+      <DependentUpon>WorkTaskStatsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkTaskStatsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkTaskStatsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkTaskStatsDataSet.xss">
+      <DependentUpon>WorkTaskStatsDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
